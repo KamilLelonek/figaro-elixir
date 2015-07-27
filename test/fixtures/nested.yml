@@ -1,0 +1,11 @@
+prod:
+  A: 12ab
+  B: 34bc
+
+dev:
+  A: 1234
+  B: 1234
+
+test:
+  A: abcd
+  B: abcd
