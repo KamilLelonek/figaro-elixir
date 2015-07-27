@@ -19,6 +19,10 @@ defmodule FigaroElixir.YamlTest do
     assert_result "nullify", %{"a" => 1, "b" => "~"}
   end
 
+  test "parsing multi file contents" do
+    assert_result "multi", %{"a" => "a", "test" => %{"b" => 1}}
+  end
+
   defp assert_result(file_name, expectation) do
     assert Yaml.parse_file("test/fixtures/#{file_name}.yml") == expectation
   end
