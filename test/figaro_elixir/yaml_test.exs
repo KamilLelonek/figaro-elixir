@@ -23,6 +23,11 @@ defmodule FigaroElixir.YamlTest do
     assert_result "multi", %{"a" => "a", "test" => %{"b" => 1}}
   end
 
+  test "parsing file with no contents" do
+    assert_result "empty", %{}
+    assert_result "blank", %{}
+  end
+
   test "file not found" do
     assert_raise(
       RuntimeError,
