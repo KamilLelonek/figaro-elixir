@@ -23,7 +23,16 @@ defmodule FigaroElixir.YamlTest do
     assert_result "multi", %{"a" => "a", "test" => %{"b" => 1}}
   end
 
+  test "file not found" do
+    assert_raise(
+      RuntimeError,
+      fn ->
+        Yaml.load_file("test.yml")
+      end
+    )
+  end
+
   defp assert_result(file_name, expectation) do
-    assert Yaml.parse_file("test/fixtures/#{file_name}.yml") == expectation
+    assert Yaml.load_file("test/fixtures/#{file_name}.yml") == expectation
   end
 end
