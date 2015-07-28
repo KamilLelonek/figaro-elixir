@@ -8,6 +8,8 @@ defmodule FigaroElixir.Mixfile do
       elixir:          "~> 1.0",
       build_embedded:  Mix.env == :prod,
       start_permanent: Mix.env == :prod,
+      description:     description,
+      package:         package,
       deps:            deps
     ]
   end
@@ -28,6 +30,21 @@ defmodule FigaroElixir.Mixfile do
   defp deps do
     [
       { :yomel, "~> 0.2.2" }
+    ]
+  end
+
+  defp description do
+    """
+    Environmental variables manager and configuration management tool.
+    """
+  end
+
+  defp package do
+    [
+      files:        ["lib", "config", "mix.exs", "README.md"],
+      contributors: ["Kamil Lelonek"],
+      licenses:     ["MIT"],
+      links:        %{ "GitHub" => "https://github.com/KamilLelonek/figaro-elixir" }
     ]
   end
 end
