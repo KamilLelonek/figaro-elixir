@@ -3,8 +3,11 @@ defmodule FigaroElixir.Config do
     Map.merge(
       get_default_config(config),
       get_env_config(config)
-    )
+    ) |> stringify_values
   end
+
+  defp stringify_values(map),           do: Enum.into(map, %{}, &stringify_value/1)
+  defp stringify_value({ key, value }), do: { key, to_string(value)}
 
   def get_default_config(config) do
     config
