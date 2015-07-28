@@ -23,13 +23,14 @@ defmodule FigaroElixir.Mixfile do
 
   defp apps do
     [
-      :logger
+      :logger,
+      :yamerl
     ]
   end
 
   defp deps do
     [
-      { :yomel, "~> 0.2.2" }
+      { :yamerl, github: "yakaz/yamerl" }
     ]
   end
 

@@ -13,12 +13,12 @@ defmodule FigaroElixir.Yaml do
 
   defp parse_file(file_path) do
     file_path
-      |> Yomel.decode_file
+      |> YamlExt.decode_file
       |> extract_map
     rescue
       FunctionClauseError -> %{}
   end
 
-  defp extract_map({ :ok, [""] }),     do: %{}
-  defp extract_map({ :ok, [result] }), do: result
+  defp extract_map(nil), do: %{}
+  defp extract_map(map), do: map
 end

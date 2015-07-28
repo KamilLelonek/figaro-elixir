@@ -16,7 +16,7 @@ defmodule FigaroElixir.EnvTest do
   end
 
   test "nullify system variables" do
-    config = %{"b" => "~"}
+    config = %{"b" => ""}
 
     System.put_env("B", "B")
 
