@@ -1,5 +1,7 @@
 # Figaro Elixir
 
+[![Build Status](https://travis-ci.org/KamilLelonek/figaro-elixir.svg)](https://travis-ci.org/KamilLelonek/figaro-elixir)
+
 This project is based on [figaro gem](https://github.com/laserlemon/figaro) for Rails written by [Steve Richert](https://twitter.com/laserlemon).
 
 It's was created to manage `ENV` configuration for `Elixir` applications.
