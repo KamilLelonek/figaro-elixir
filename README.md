@@ -20,7 +20,7 @@ Add Figaro Elixir as a dependency in your `mix.exs` file.
 defp deps do
   [
   	 # ...
-    { :figaro_elixir, "~> 0.0.1" }
+    { :figaro_elixir, "~> 1.0.0" }
   ]
 end
 ```
