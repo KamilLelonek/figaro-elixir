@@ -1,6 +1,8 @@
 defmodule FigaroElixir.YamlTest do
   use ExUnit.Case
 
+  import ExUnit.CaptureLog
+
   alias FigaroElixir.Yaml
 
   test "parsing flat file contents" do
@@ -29,12 +31,8 @@ defmodule FigaroElixir.YamlTest do
   end
 
   test "file not found" do
-    assert_raise(
-      RuntimeError,
-      fn ->
-        Yaml.load_file("test.yml")
-      end
-    )
+    assert capture_log(fn -> Yaml.load_file("missing.yml") end) =~ "missing.yml file not found"
+    assert_result "missing", %{}
   end
 
   defp assert_result(file_name, expectation) do
