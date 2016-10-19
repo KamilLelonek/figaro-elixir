@@ -19,9 +19,8 @@ Add Figaro Elixir as a dependency in your `mix.exs` file.
 ```elixir
 defp deps do
   [
-  	 # ...
-    { :figaro_elixir, "~> 1.0.0" },
-    { :yamerl, github: "yakaz/yamerl" }
+    # ...
+    {:figaro_elixir, "~> 1.0.0"}
   ]
 end
 ```
@@ -31,10 +30,10 @@ You should also update your applications list to include Figaro:
 ```elixir
 def application do
   [
-  	 applications: [
-  	   # ...
-  	   :figaro_elixir
-  	 ]
+     applications: [
+       # ...
+       :figaro_elixir
+     ]
   ]
 end
 ```
