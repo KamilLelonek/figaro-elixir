@@ -1,11 +1,16 @@
 defmodule FigaroElixir.Yaml do
+  require Logger
+
   @config_path "config/application.yml"
 
   def load_file(path \\ @config_path) do
     file = config_file(path)
     cond do
-      File.exists?(file) -> parse_file(file)
-      true               -> raise "#{file} file not found"
+      File.exists?(file) ->
+        parse_file(file)
+      true ->
+        Logger.warn "#{path} file not found"
+        %{}
     end
   end
 

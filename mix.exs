@@ -5,7 +5,7 @@ defmodule FigaroElixir.Mixfile do
     [
       app:             :figaro_elixir,
       version:         "1.0.0",
-      elixir:          "~> 1.0",
+      elixir:          "~> 1.3",
       build_embedded:  Mix.env == :prod,
       start_permanent: Mix.env == :prod,
       description:     description,
