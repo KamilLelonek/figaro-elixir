@@ -16,7 +16,7 @@ defmodule FigaroElixir.Mixfile do
 
   def application do
     [
-      mod:          { FigaroElixir, [] },
+      mod:          {FigaroElixir, []},
       applications: apps
     ]
   end
@@ -30,7 +30,7 @@ defmodule FigaroElixir.Mixfile do
 
   defp deps do
     [
-      { :yamerl, github: "yakaz/yamerl" }
+      {:yamerl, "~> 0.3.2"},
     ]
   end
 
