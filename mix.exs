@@ -31,6 +31,7 @@ defmodule FigaroElixir.Mixfile do
   defp deps do
     [
       {:yamerl, "~> 0.3.2"},
+      {:ex_doc, ">= 0.0.0", only: :dev},
     ]
   end
 
